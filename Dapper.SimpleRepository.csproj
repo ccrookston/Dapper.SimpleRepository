@@ -10,7 +10,7 @@
     <Product>Dapper SimpleRepository</Product>
     <Copyright>2020</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
-    <PackageReleaseNotes>Add Project and Repository URL to documentation.</PackageReleaseNotes>
+    <PackageReleaseNotes>Switch from System.Data.SqlClient to Microsoft.Data.SqlClient</PackageReleaseNotes>
     <Version>1.0.3</Version>
     <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
