@@ -101,9 +101,13 @@ int newId = petRepo.Insert(pet);       // Insert Fletcher into the Pet table
 ```
 In the example above, `newId` is the newly created `Pet.PetId`.
 
-###### Read:
+###### Read Single:
 ```csharp
 Pet pet = PetRepo.Get(1);                   // Get Fletcher's unique record
+```
+
+###### Read All:
+```csharp
 IEnumerable<Pet> pets = petRepo.GetAll();   // Get all pets
 ```
 
@@ -140,9 +144,13 @@ int newId = repo.Insert<Pet>(pet);     // Insert Fletcher into the Pet table
 ```
 In the example above, `newId` is the newly created `Pet.PetId`.
 
-###### Read:
+###### Read Single:
 ```csharp
 Pet pet = repo.Get<Pet>(1);                   // Get Fletcher's unique record
+```
+
+###### Read All:
+```csharp
 IEnumerable<Pet> pets = repo.GetAll<Pet>();   // Get all pets
 ```
 
