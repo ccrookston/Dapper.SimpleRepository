@@ -5,6 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
+// Dapper.SimpleRepository was creatd by Casey Crookston. You are free to use it however you would like.
+// I hope it makes your developent faster and easier.
+
 namespace Dapper.SimpleRepository
 {
     public class Repository<T>
