@@ -11,10 +11,11 @@
     <Copyright>2020</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
     <PackageReleaseNotes>Add Project and Repository URL to documentation.</PackageReleaseNotes>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ccrookston/Dapper.SimpleRepository</RepositoryUrl>
+    <FileVersion>1.0.3.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="README.md">
