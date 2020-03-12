@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -415,7 +414,7 @@ namespace Dapper.SimpleRepository
         {
             using (var connection = OpenConnection(_connectionString))
             {
-                connection.Execute(query, param: parms, commandType: CommandType.Text);
+                connection.Query<T>(query, param: parms);
             }
         }
 
@@ -428,7 +427,7 @@ namespace Dapper.SimpleRepository
         {
             using (var connection = OpenConnection(_connectionString))
             {
-                await connection.ExecuteAsync(query, param: parms, commandType: CommandType.Text);
+                await connection.ExecuteAsync(query, param: parms);
             }
         }
 
@@ -442,7 +441,7 @@ namespace Dapper.SimpleRepository
         {
             using (var connection = OpenConnection(_connectionString))
             {
-                return connection.ExecuteScalar<T>(query, param: parms, commandType: CommandType.Text);
+                return connection.ExecuteScalar<T>(query, param: parms);
             }
         }
 
@@ -456,7 +455,7 @@ namespace Dapper.SimpleRepository
         {
             using (var connection = OpenConnection(_connectionString))
             {
-                return await connection.ExecuteScalarAsync<T>(query, param: parms, commandType: CommandType.Text);
+                return await connection.ExecuteScalarAsync<T>(query, param: parms);
             }
         }
 
