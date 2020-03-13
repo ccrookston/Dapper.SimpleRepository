@@ -1,6 +1,6 @@
 # Dapper.SimpleRepository 
 
-Perform all of your database CRUD operations with a single line of code:
+Dapper.SimpleRepository builds on top of Dapper and allows you to perform all of your database CRUD operations with a single line of code:
 
 ```csharp
 repo.Insert(myObject);    // Add a record to the database
