@@ -173,7 +173,7 @@ int rowsAffected = repo.Update<Pet>(pet);     // Update Fletcher's record in the
 int rowsAffected = repo.Delete<Pet>(1);     // Delete Fletcher
 ```
 
-### Going Beyond Basic CRUD:
+# Going Beyond Basic CRUD:
 -------
 In addition to the basic CRUD methods above, the following methods are also available. Each of these examples assumes that `petRepo` was created as strongly-typed to `Pet`. But, each can also be used with the non-strongly-typed option as well.
 
