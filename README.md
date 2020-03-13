@@ -2,7 +2,7 @@
 
 Dapper.SimpleRepository builds on top of Dapper and allows you to perform all of your database CRUD operations with a single line of code. Scroll down for full examples and tutorials, but here's a quick look.
 
-First, create your repository by injecting the connection string and defifing the type:
+First, create your repository by injecting the connection string and defining the type:
 
 ```csharp
 Dapper.SimpleRepository.Repository<myObject> repo = new Dapper.SimpleRepository.Repository<myObject>("your connection string");
