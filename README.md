@@ -202,7 +202,7 @@ Dictionary<string, object> parms = new Dictionary<string, object>()
 {
     {"PetId", 1}
 };
-Pet pet = petRepo.Get(query, parms);
+Pet pet = petRepo.GetFromQuery(query, parms);
 ```
 ###### Select a List of Records with a Parameterized WHERE Clause:
 ```csharp
