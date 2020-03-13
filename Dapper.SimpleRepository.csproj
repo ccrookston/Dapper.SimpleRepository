@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>Dapper.SimpleRepository is a Dapper exension that greatly simplifies your data access using a single Dapper repository. It supports all standard CRUD operations and stored procedures in both async and non-async.</Description>
+    <Description>Dapper.SimpleRepository is a Dapper extension that reduces CRUD operations to a single line of code and greatly simplifies other data access operations using filters, queries and stored procedures. It supports Async and non-Async in Framework, Standard and Core</Description>
     <Company />
     <Authors>Casey Crookston</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -10,12 +10,12 @@
     <Product>Dapper SimpleRepository</Product>
     <Copyright>2020</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
-    <PackageReleaseNotes>Switch from System.Data.SqlClient to Microsoft.Data.SqlClient</PackageReleaseNotes>
-    <Version>1.0.3</Version>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <PackageReleaseNotes>Description improvement (no code changes).</PackageReleaseNotes>
+    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ccrookston/Dapper.SimpleRepository</RepositoryUrl>
-    <FileVersion>1.0.3.0</FileVersion>
+    <FileVersion>1.0.5.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="README.md">
