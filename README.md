@@ -1,4 +1,4 @@
-﻿﻿# Dapper.SimpleRepository 
+# Dapper.SimpleRepository 
 
 Perform all of your database CRUD operations with a single line of code:
 
