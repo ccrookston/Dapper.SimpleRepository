@@ -74,7 +74,7 @@ When using Dapper.SimpleRepository, you have two options.
 1. Create a Respository instance that is pre-set to a specific type (or class) when creating the repository.
 2. Create a Respository instance that has no type when created, and the type is specified when calling each method.
 
-Let's assume we have the following `Pet` class which mirrors a table in our database:
+Assume we have the following `Pet` class which mirrors a table in our database:
 
 ```csharp
 public class Pet
@@ -87,7 +87,7 @@ public class Pet
 ```
 ### Option 1: Create a Strongly Typed Repository
 -------
-Lets create an instance of `Dapper.SimpleRepository` and assign it the type of `Pet`. We'll call it `petRepo` and inject the required connection string.
+Create an instance of `Dapper.SimpleRepository` and assign it the type of `Pet`. We'll call it `petRepo` and inject the required connection string.
 
 ```csharp
 readonly Dapper.SimpleRepository.Repository<Pet> petRepo = new Dapper.SimpleRepository.Repository<Pet>(connectionString);
@@ -132,7 +132,7 @@ int rowsAffected = petRepo.Delete(1);    // Delete Fletcher
 
 ### Option 2: Create a Non-Strongly Typed Repository
 -------
-Lets create another instance of `Dapper.SimpleRepository` that is NOT strongly typed and inject the connection string. We'll just call this one `repo`.
+Create another instance of `Dapper.SimpleRepository` that is NOT strongly typed and inject the connection string. We'll just call this one `repo`.
 
 ```csharp
 readonly Dapper.SimpleRepository.Repository repo = new Dapper.SimpleRepository.Repository(connectionString);
