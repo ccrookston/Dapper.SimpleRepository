@@ -1,6 +1,6 @@
 # Dapper.SimpleRepository 
 
-Dapper.SimpleRepository builds on top of Dapper and allows you to perform all of your database CRUD operations with a single line of code. Scroll down for full examples and tutorials, but here's a quick look.
+Dapper.SimpleRepository is a Dapper extension that creates a repository which reduces CRUD operations to a single line of code. It also greatly simplifies executing CRUD operations with filters, executing full queries, and executing stored procedures. It supports Async and non-Async in Framework, Standard and Core.
 
 First, create your repository by injecting the connection string and defining the type:
 
@@ -54,7 +54,7 @@ Dapper.SimpleRepository depends on Dapper, which is a Micro-ORM tool that is a l
 ##### Dapper.SimpleCrud
 https://github.com/ericdc1/Dapper.SimpleCRUD
 
-Dapper.SimpleRepository also depends on Dapper.SimpleCrud, simplifies CRUD operations.
+Dapper.SimpleRepository also depends on Dapper.SimpleCrud, which helps to simplifies CRUD operations.
 
 ##### Dapper.SimpleCRUD.ModelGenerator
 https://www.nuget.org/packages/Dapper.SimpleCRUD.ModelGenerator
