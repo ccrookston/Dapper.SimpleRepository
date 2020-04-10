@@ -54,7 +54,7 @@ Dapper.SimpleRepository depends on Dapper, which is a Micro-ORM tool that is a l
 ##### Dapper.SimpleCrud
 https://github.com/ericdc1/Dapper.SimpleCRUD
 
-Dapper.SimpleRepository also depends on Dapper.SimpleCrud, which helps to simplifies CRUD operations.
+Dapper.SimpleRepository also depends on Dapper.SimpleCrud, which helps to simplify CRUD operations.
 
 ##### Dapper.SimpleCRUD.ModelGenerator
 https://www.nuget.org/packages/Dapper.SimpleCRUD.ModelGenerator
