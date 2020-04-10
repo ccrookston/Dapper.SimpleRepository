@@ -7,11 +7,12 @@ Dapper.SimpleRepository creates a Dapper repository that reduces CRUD operations
 
 Dapper.SimpleRepository can be used stronlgly or weakly typed. Create your repository by injecting the connection string.
 
+##### Strongly Typed:
 ```csharp
 Dapper.SimpleRepository.IRepositoryStrong<type> repoStrong = new Dapper.SimpleRepository.Repository<myObject>("your connection string");
 ```
 
-Or
+##### Weakly Typed:
 
 ```csharp
 Dapper.SimpleRepository.IRepositoryGeneric repoGeneric = new Dapper.SimpleRepository.Repository("your connection string");
