@@ -2,7 +2,7 @@
 
 Dapper.SimpleRepository creates a Dapper repository that reduces CRUD operations to a single line of code. It also greatly simplifies executing CRUD operations with filters, executing full queries, and executing stored procedures. It supports Async and non-Async in Framework, Standard and Core.
 
-##### Full working examples are given below. Here's a quick look:
+#### Quick look (scroll down for full working examples):
 
 First, create your repository by injecting the connection string and defining the type:
 
