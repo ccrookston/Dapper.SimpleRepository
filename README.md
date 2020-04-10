@@ -5,19 +5,35 @@ Dapper.SimpleRepository creates a Dapper repository that reduces CRUD operations
 ## Quick Look:
 (Scroll down for full working examples.)
 
-First, create your repository by injecting the connection string and defining the type:
+Dapper.SimpleRepository can be used stronlgly or weakly typed. Create your repository by injecting the connection string and defining the type
 
 ```csharp
-Dapper.SimpleRepository.Repository<myObject> repo = new Dapper.SimpleRepository.Repository<myObject>("your connection string");
+Dapper.SimpleRepository.IRepositoryStrong<type> repoStrong = new Dapper.SimpleRepository.Repository<myObject>("your connection string");
 ```
+
+Or
+
+```csharp
+Dapper.SimpleRepository.IRepositoryGeneric repoGeneric = new Dapper.SimpleRepository.Repository("your connection string");
+```
+
 
 Then your data access is as easy as:
 
 ```csharp
-repo.Insert(myObject);    // Add a record to the database
-repo.Get(55);             // Get a sinlge item from the database by Id
-repo.Update(myObject);    // Update a record in the database
-repo.Delete(55);          // Delete a single object from the database by Id
+repoStrong.Insert(myObject);    // Add a record to the database
+repoStrong.Get(55);             // Get a sinlge item from the database by Id
+repoStrong.Update(myObject);    // Update a record in the database
+repoStrong.Delete(55);          // Delete a single object from the database by Id
+```
+
+Or
+
+```csharp
+repoGeneric.Insert<type>(myObject);    // Add a record to the database
+repoGeneric.Get<type>(55);             // Get a sinlge item from the database by Id
+repoGeneric.Update<type>(myObject);    // Update a record in the database
+repoGeneric.Delete<type>(55);          // Delete a single object from the database by Id
 ```
 
 Expand basic CRUD operations with filters:
@@ -25,7 +41,7 @@ Expand basic CRUD operations with filters:
 ```csharp
 string where = "WHERE Name = @Name";
 Dictionary<string, object> parms =   // define your parameters
-repo.Get(where, parms);
+repoStrong.Get(where, parms);
 ```
 
 Quickly and easily execute custom queries with (optional) parameters:
@@ -33,14 +49,14 @@ Quickly and easily execute custom queries with (optional) parameters:
 ```csharp
 string query = "SELECT * FROM Pets WHERE Name = @Name";
 Dictionary<string, object> parms =  // define your parameters
-repo.ExecuteQuery(query, parms);
+repoStrong.ExecuteQuery(query, parms);
 ```
 
 Quickly and easily execute stored procedures with (optional) parameters:
 
 ```csharp
 Dictionary<string, object> parms =  // define your parameters
-repo.ExecuteSP("StoredProcName", parms);
+repoStrong.ExecuteSP("StoredProcName", parms);
 ```
 
 And more.
