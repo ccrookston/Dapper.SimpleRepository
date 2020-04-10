@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>Dapper.SimpleRepository is a Dapper extension that reduces CRUD operations to a single line of code and greatly simplifies other data access operations using filters, queries and stored procedures. It supports Async and non-Async in Framework, Standard and Core</Description>
+    <Description>Dapper.SimpleRepository is a Dapper extension that creates a repository which reduces CRUD operations to a single line of code. It also greatly simplifies executing CRUD operations with filters, executing full queries, and executing stored procedures. It supports Async and non-Async in Framework, Standard and Core.</Description>
     <Company />
     <Authors>Casey Crookston</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -10,12 +10,16 @@
     <Product>Dapper SimpleRepository</Product>
     <Copyright>2020</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
-    <PackageReleaseNotes>Description improvement (no code changes).</PackageReleaseNotes>
-    <Version>1.0.5</Version>
-    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <PackageReleaseNotes>Add an XML file for intellisense. Add Interfaces for dependency injection.</PackageReleaseNotes>
+    <Version>1.0.6</Version>
+    <AssemblyVersion>1.0.6.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ccrookston/Dapper.SimpleRepository</RepositoryUrl>
-    <FileVersion>1.0.5.0</FileVersion>
+    <FileVersion>1.0.6.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Workspace\Dapper.SimpleRepository\Dapper.SimpleRepository.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="README.md">

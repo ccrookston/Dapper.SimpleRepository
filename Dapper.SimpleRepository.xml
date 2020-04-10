@@ -1,0 +1,1111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dapper.SimpleRepository</name>
+    </assembly>
+    <members>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAsync``1(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query.  This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAll``1">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <returns>an IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAllAsync``1">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListPaged``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListPagedAsync``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Update``1(``0)">
+            <summary>
+            <para>Update as existing record in any database table, matching by Id of the record.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.UpdateAsync``1(``0)">
+            <summary>
+            <para>Update any existing record in any database table. Returns number of rows affected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Insert``1(``0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.InsertAsync``1(``0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Delete``1(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.DeleteAsync``1(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Delete``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.DeleteAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteScalar``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteScalarAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSP``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPSingle``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPSingleAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAsync(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter.</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter.</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAll">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            </summary>
+            <returns>an IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAllAsync">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            </summary>
+            <returns>an IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            </summary>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            </summary>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Update(`0)">
+            <summary>
+            <para>Update as existing record in any database table, matching by Id of the record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.UpdateAsync(`0)">
+            <summary>
+            <para>Update as existing record in any database table, matching by Id of the record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Insert(`0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.InsertAsync(`0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Delete(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.DeleteAsync(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Delete(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter.</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.DeleteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteScalarAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPSingle(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPSingleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="T:Dapper.SimpleRepository.Repository">
+            <summary>
+            Main class for Dapper.SimpleRepository extensions. This option is not strongly typed.
+            </summary>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.#ctor(System.String)">
+            <summary>
+            Inject the connection string (as a string) when creating an instance of this class.
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.Get``1(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetAsync``1(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query.  This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetAll``1">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <returns>an IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetAllAsync``1">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetListFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetListFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetListPaged``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.GetListPagedAsync``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.Update``1(``0)">
+            <summary>
+            <para>Update as existing record in any database table, matching by Id of the record.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.UpdateAsync``1(``0)">
+            <summary>
+            <para>Update any existing record in any database table. Returns number of rows affected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.Insert``1(``0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.InsertAsync``1(``0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.Delete``1(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.DeleteAsync``1(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.Delete``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.DeleteAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteScalar``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteScalarAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSP``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPSingle``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPSingleAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            <para>Queries the table matching the type T.</para>
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="T:Dapper.SimpleRepository.Repository`1">
+            <summary>
+            Main class for Dapper.SimpleRepository extensions. This option is strongly typed.
+            </summary>
+            <typeparam name="T">The Type that matches the database table.</typeparam>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.#ctor(System.String)">
+            <summary>
+            Inject the connection string (as a string) when creating an instance of this class.
+            </summary>
+            <param name="connectionString"></param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.Get(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetAsync(System.Int32)">
+            <summary>
+            <para>Get a specific record from any table by the primary key.</para>
+            </summary>
+            <param name="id"></param>
+            <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter.</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific record from any table that matches the specified filter.</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetAll">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            </summary>
+            <returns>an IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetAllAsync">
+            <summary>
+            <para>Get an IEnumerable of all records of any database table</para>
+            </summary>
+            <returns>an IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table that matches the specified filter</para>
+            </summary>
+            <param name="where"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+            </summary>
+            <param name="query"></param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            </summary>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Get a paged IEnumerable of all records of any database table.</para>
+            </summary>
+            <param name="pageNumber">The offset (or page number) of the total set to select.</param>
+            <param name="rowsPerPage">The number of total records to return per page.</param>
+            <param name="where">Optional WHERE clause to filter the resutls.</param>
+            <param name="orderBy">Optional ORDER BY clause to order the results.</param>
+            <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <returns>A paged IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.Update(`0)">
+            <summary>
+            <para>Update as existing record in any database table, matching by Id of the record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.UpdateAsync(`0)">
+            <summary>
+            <para>Update as existing record in any database table, matching by Id of the record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.Insert(`0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.InsertAsync(`0)">
+            <summary>
+            <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+            </summary>
+            <param name="entity">An instance of type T to be updated.</param>
+            <returns>The ID (primary key) of the newly inserted record.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.Delete(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.DeleteAsync(System.Int32)">
+            <summary>
+            <para>Delete a record by primary key from any database table.</para>
+            </summary>
+            <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.Delete(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter.</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.DeleteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Delete all records from any table that match the specified filter</para>
+            </summary>
+            <param name="where">Optional WHERE clause.</param>
+            <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+            <returns>Number of rows affected.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a return data set it not expected.</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteScalarAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+            </summary>
+            <param name="query">Full SQL query.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T that matches the supplied query.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPSingle(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPSingleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute any Stored Procedure where a single item is expected as a return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>A single instance of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            <para>Execute a Store Procedure when a List of T is expected in return.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameteres that matches the query.</param>
+            <returns>An IEnumerable of type T.</returns>
+        </member>
+    </members>
+</doc>
