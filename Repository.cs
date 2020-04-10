@@ -35,11 +35,11 @@ namespace Dapper.SimpleRepository
         // ----------- GET Single Item Methods ----------- //
 
         /// <summary>
-        /// <para>Get a specific record from any table by the primary key.</para>
+        /// <para>Get a specific record by the primary key (id).</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
         public T Get<T>(int id)
         {
             T entity;
@@ -51,11 +51,11 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a specific record from any table by the primary key.</para>
+        /// <para>Get a specific record by the primary key (id).</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
         public async Task<T> GetAsync<T>(int id)
         {
             T entity;
@@ -67,12 +67,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a specific record from any table that matches the specified filter.</para>
+        /// <para>Get a specific record that matches the specified filter.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         public T Get<T>(string where, Dictionary<string, object> parms = null)
         {
@@ -91,12 +91,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a specific record from any table that matches the specified filter</para>
+        /// <para>Get a specific record that matches the specified filter</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         public async Task<T> GetAsync<T>(string where, Dictionary<string, object> parms = null)
         {
@@ -115,12 +115,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+        /// <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public T GetFromQuery<T>(string query, Dictionary<string, object> parms = null)
         {
@@ -136,12 +136,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a specific type from any query.  This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+        /// <para>Get a specific type from a query.  This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public async Task<T> GetFromQueryAsync<T>(string query, Dictionary<string, object> parms = null)
         {
@@ -163,7 +163,7 @@ namespace Dapper.SimpleRepository
         // ----------- GET List Methods ----------- //
 
         /// <summary>
-        /// <para>Get an IEnumerable of all records of any database table</para>
+        /// <para>Get an IEnumerable of all records.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <returns>an IEnumerable of type T.</returns>
@@ -178,7 +178,7 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get an IEnumerable of all records of any database table</para>
+        /// <para>Get an IEnumerable of all records.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <returns>An IEnumerable of type T.</returns>
@@ -193,12 +193,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table that matches the specified filter</para>
+        /// <para>Get an IEnumerable that matches the specified filter</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         public IEnumerable<T> GetList<T>(string where, Dictionary<string, object> parms = null)
         {
@@ -214,12 +214,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table that matches the specified filter</para>
+        /// <para>Get an IEnumerable that matches the specified filter</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         public async Task<IEnumerable<T>> GetListAsync<T>(string where, Dictionary<string, object> parms = null)
         {
@@ -235,12 +235,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+        /// <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T that matches the supplied query.</returns>
         public IEnumerable<T> GetListFromQuery<T>(string query, Dictionary<string, object> parms = null)
         {
@@ -256,12 +256,12 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+        /// <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T that matches the supplied query.</returns>
         public async Task<IEnumerable<T>> GetListFromQueryAsync<T>(string query, Dictionary<string, object> parms = null)
         {
@@ -277,10 +277,10 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a paged IEnumerable of all records of any database table.</para>
+        /// <para>Get a paged IEnumerable of all records.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="pageNumber">The offset (or page number) of the total set to select.</param>
         /// <param name="rowsPerPage">The number of total records to return per page.</param>
         /// <param name="where">Optional WHERE clause to filter the resutls.</param>
@@ -298,10 +298,10 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Get a paged IEnumerable of all records of any database table.</para>
+        /// <para>Get a paged IEnumerable of all records.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="pageNumber">The offset (or page number) of the total set to select.</param>
         /// <param name="rowsPerPage">The number of total records to return per page.</param>
         /// <param name="where">Optional WHERE clause to filter the resutls.</param>
@@ -321,7 +321,7 @@ namespace Dapper.SimpleRepository
         // ----------- UPDATE Methods ----------- //
 
         /// <summary>
-        /// <para>Update as existing record in any database table, matching by Id of the record.</para>
+        /// <para>Update an existing record.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
@@ -335,7 +335,7 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Update any existing record in any database table. Returns number of rows affected.</para>
+        /// <para>Update an existing record.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
@@ -353,8 +353,8 @@ namespace Dapper.SimpleRepository
         // ----------- INSERT Methods ----------- //
 
         /// <summary>
-        /// <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
-        /// <para>Queries the table matching the type T.</para>
+        /// <para>Insert a new record.</para>
+        /// <para>Inserts into the table matching the type T.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <returns>The ID (primary key) of the newly inserted record.</returns>
@@ -369,8 +369,8 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
-        /// <para>Queries the table matching the type T.</para>
+        /// <para>Insert a new record.</para>
+        /// <para>Inserts into the table matching the type T.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <returns>The ID (primary key) of the newly inserted record.</returns>
@@ -387,8 +387,8 @@ namespace Dapper.SimpleRepository
         // ----------- DELETE Methods ----------- //
 
         /// <summary>
-        /// <para>Delete a record by primary key from any database table</para>
-        /// <para>Queries the table matching the type T.</para>
+        /// <para>Delete a record by primary key (id).</para>
+        /// <para>Deletes from the table matching the type T.</para>
         /// </summary>
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <returns>Number of rows affected.</returns>
@@ -401,8 +401,8 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Delete a record by primary key from any database table</para>
-        /// <para>Queries the table matching the type T.</para>
+        /// <para>Delete a record by primary key (id).</para>
+        /// <para>Deletes from the table matching the type T.</para>
         /// </summary>
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <returns>Number of rows affected.</returns>
@@ -415,11 +415,11 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Delete all records from any table that match the specified filter</para>
-        /// <para>Queries the table matching the type T.</para>
+        /// <para>Delete all records that match the specified filter.</para>
+        /// <para>Deletes from the table matching the type T.</para>
         /// </summary>
         /// <param name="where">Optional WHERE clause.</param>
-        /// <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
         /// <returns>Number of rows affected.</returns>
         public int Delete<T>(string where, Dictionary<string, object> parms = null)
         {
@@ -430,11 +430,11 @@ namespace Dapper.SimpleRepository
         }
 
         /// <summary>
-        /// <para>Delete all records from any table that match the specified filter</para>
-        /// <para>Queries the table matching the type T.</para>
+        /// <para>Delete all records that match the specified filter.</para>
+        /// <para>Deletes from the table matching the type T.</para>
         /// </summary>
         /// <param name="where">Optional WHERE clause.</param>
-        /// <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
         /// <returns>Number of rows affected.</returns>
         public async Task<int> DeleteAsync<T>(string where, Dictionary<string, object> parms = null)
         {
@@ -450,9 +450,9 @@ namespace Dapper.SimpleRepository
         /// <para>Execute any custom query where a return data set it not expected.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         public void ExecuteQuery<T>(string query, Dictionary<string, object> parms = null)
         {
             using (var connection = OpenConnection(_connectionString))
@@ -465,9 +465,9 @@ namespace Dapper.SimpleRepository
         /// <para>Execute any custom query where a return data set it not expected.</para>
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         public async Task ExecuteQueryAsync<T>(string query, Dictionary<string, object> parms = null)
         {
             using (var connection = OpenConnection(_connectionString))
@@ -481,7 +481,7 @@ namespace Dapper.SimpleRepository
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public T ExecuteScalar<T>(string query, Dictionary<string, object> parms = null)
         {
@@ -496,7 +496,7 @@ namespace Dapper.SimpleRepository
         /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public async Task<T> ExecuteScalarAsync<T>(string query, Dictionary<string, object> parms = null)
         {
@@ -510,11 +510,10 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Execute any Stored Procedure where a return data set it not expected.</para>
-        /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
-        public void ExecuteSP<T>(string storedProcedureName, Dictionary<string, object> parms = null)
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
+        public void ExecuteSP(string storedProcedureName, Dictionary<string, object> parms = null)
         {
             using (var connection = OpenConnection(_connectionString))
             {
@@ -524,11 +523,10 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Execute any Stored Procedure where a return data set it not expected.</para>
-        /// <para>Queries the table matching the type T.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
-        public async Task ExecuteSPAsync<T>(string storedProcedureName, Dictionary<string, object> parms = null)
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
+        public async Task ExecuteSPAsync(string storedProcedureName, Dictionary<string, object> parms = null)
         {
             using (var connection = OpenConnection(_connectionString))
             {
@@ -538,11 +536,10 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Execute any Stored Procedure where a single item is expected as a return.</para>
-        /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T.</returns>
         public T ExecuteSPSingle<T>(string storedProcedureName, Dictionary<string, object> parms = null)
         {
@@ -559,11 +556,10 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Execute any Stored Procedure where a single item is expected as a return.</para>
-        /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T.</returns>
         public async Task<T> ExecuteSPSingleAsync<T>(string storedProcedureName, Dictionary<string, object> parms = null)
         {
@@ -580,11 +576,10 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Execute a Store Procedure when a List of T is expected in return.</para>
-        /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T.</returns>
         public IEnumerable<T> ExecuteSPList<T>(string storedProcedureName, Dictionary<string, object> parms = null)
         {
@@ -597,11 +592,10 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Execute a Store Procedure when a List of T is expected in return.</para>
-        /// <para>Queries the table matching the type T.</para>
         /// </summary>
-        /// <typeparam name="T">The Type that matches the database table.</typeparam>
+        /// <typeparam name="T">The type that matches the database table.</typeparam>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T.</returns>
         public async Task<IEnumerable<T>> ExecuteSPListAsync<T>(string storedProcedureName, Dictionary<string, object> parms = null)
         {
@@ -616,7 +610,7 @@ namespace Dapper.SimpleRepository
     /// <summary>
     /// Main class for Dapper.SimpleRepository extensions. This option is strongly typed.
     /// </summary>
-    /// <typeparam name="T">The Type that matches the database table.</typeparam>
+    /// <typeparam name="T">The type that matches the database table.</typeparam>
     public class Repository<T> : IRepositoryStrong<T>
     {
         private readonly Repository _base;
@@ -634,99 +628,99 @@ namespace Dapper.SimpleRepository
 
 
         /// <summary>
-        /// <para>Get a specific record from any table by the primary key.</para>
+        /// <para>Get a specific record by the primary key (id).</para>
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
         public T Get(int id) => _base.Get<T>(id);
 
         /// <summary>
-        /// <para>Get a specific record from any table by the primary key.</para>
+        /// <para>Get a specific record by the primary key (id).</para>
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>A single record of type T where the primary key matches the supplied Id.</returns>
+        /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
         public async Task<T> GetAsync(int id) => await _base.GetAsync<T>(id);
 
         /// <summary>
-        /// <para>Get a specific record from any table that matches the specified filter.</para>
+        /// <para>Get a specific record that matches the specified filter.</para>
         /// </summary>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         public T Get(string where, Dictionary<string, object> parms = null) => _base.Get<T>(where, parms);
 
         /// <summary>
-        /// <para>Get a specific record from any table that matches the specified filter.</para>
+        /// <para>Get a specific record that matches the specified filter.</para>
         /// </summary>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         public async Task<T> GetAsync(string where, Dictionary<string, object> parms = null) => await _base.GetAsync<T>(where, parms);
 
         /// <summary>
-        /// <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+        /// <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
         /// </summary>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public T GetFromQuery(string query, Dictionary<string, object> parms = null) => _base.GetFromQuery<T>(query, parms);
 
         /// <summary>
-        /// <para>Get a specific type from any query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
+        /// <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
         /// </summary>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public async Task<T> GetFromQueryAsync(string query, Dictionary<string, object> parms = null) => await _base.GetFromQueryAsync<T>(query, parms);
 
         // ----------- GET List Methods ----------- //
 
         /// <summary>
-        /// <para>Get an IEnumerable of all records of any database table</para>
+        /// <para>Get an IEnumerable of all records.</para>
         /// </summary>
         /// <returns>an IEnumerable of type T.</returns>
         public IEnumerable<T> GetAll() => _base.GetAll<T>();
 
         /// <summary>
-        /// <para>Get an IEnumerable of all records of any database table</para>
+        /// <para>Get an IEnumerable of all records.</para>
         /// </summary>
         /// <returns>an IEnumerable of type T.</returns>
         public async Task<IEnumerable<T>> GetAllAsync() => await _base.GetAllAsync<T>();
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table that matches the specified filter</para>
+        /// <para>Get an IEnumerable that matches the specified filter</para>
         /// </summary>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         public IEnumerable<T> GetList(string where, Dictionary<string, object> parms = null) => _base.GetList<T>(where, parms);
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table that matches the specified filter</para>
+        /// <para>Get an IEnumerable that matches the specified filter</para>
         /// </summary>
-        /// <param name="where"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="where">The SQL WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         public async Task<IEnumerable<T>> GetListAsync(string where, Dictionary<string, object> parms = null) => await _base.GetListAsync<T>(where, parms);
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+        /// <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
         /// </summary>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T that matches the supplied query.</returns>
         public IEnumerable<T> GetListFromQuery(string query, Dictionary<string, object> parms = null) => _base.GetListFromQuery<T>(query, parms);
 
         /// <summary>
-        /// <para>Get an IEnumerable from any table based on a custom query and any (optional) parms</para>
+        /// <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
         /// </summary>
         /// <param name="query"></param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T that matches the supplied query.</returns>
         public async Task<IEnumerable<T>> GetListFromQueryAsync(string query, Dictionary<string, object> parms = null) => await _base.GetListFromQueryAsync<T>(query, parms);
 
         /// <summary>
-        /// <para>Get a paged IEnumerable of all records of any database table.</para>
+        /// <para>Get a paged IEnumerable of all records.</para>
         /// </summary>
         /// <param name="pageNumber">The offset (or page number) of the total set to select.</param>
         /// <param name="rowsPerPage">The number of total records to return per page.</param>
@@ -737,7 +731,7 @@ namespace Dapper.SimpleRepository
         public IEnumerable<T> GetListPaged(int pageNumber, int rowsPerPage, string where, string orderBy, Dictionary<string, object> parms = null) => _base.GetListPaged<T>(pageNumber, rowsPerPage, where, orderBy, parms);
 
         /// <summary>
-        /// <para>Get a paged IEnumerable of all records of any database table.</para>
+        /// <para>Get a paged IEnumerable of all records.</para>
         /// </summary>
         /// <param name="pageNumber">The offset (or page number) of the total set to select.</param>
         /// <param name="rowsPerPage">The number of total records to return per page.</param>
@@ -750,14 +744,14 @@ namespace Dapper.SimpleRepository
         // ----------- UPDATE Methods ----------- //
 
         /// <summary>
-        /// <para>Update as existing record in any database table, matching by Id of the record.</para>
+        /// <para>Update an existing record.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <returns>Number of rows affected.</returns>
         public int Update(T entity) => _base.Update<T>(entity);
 
         /// <summary>
-        /// <para>Update as existing record in any database table, matching by Id of the record.</para>
+        /// <para>Update an existing record.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <returns>Number of rows affected.</returns>
@@ -766,14 +760,14 @@ namespace Dapper.SimpleRepository
         // ----------- INSERT Methods ----------- //
 
         /// <summary>
-        /// <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+        /// <para>Insert a new record.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <returns>The ID (primary key) of the newly inserted record.</returns>
         public int? Insert(T entity) => _base.Insert<T>(entity);
 
         /// <summary>
-        /// <para>Insert a new record into any database table. Retuns the Id of the newly created record.</para>
+        /// <para>Insert a new record.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <returns>The ID (primary key) of the newly inserted record.</returns>
@@ -782,32 +776,32 @@ namespace Dapper.SimpleRepository
         // ----------- DELETE Methods ----------- //
 
         /// <summary>
-        /// <para>Delete a record by primary key from any database table.</para>
+        /// <para>Delete a record by primary key (id)..</para>
         /// </summary>
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <returns>Number of rows affected.</returns>
         public int Delete(int id) => _base.Delete<T>(id);
 
         /// <summary>
-        /// <para>Delete a record by primary key from any database table.</para>
+        /// <para>Delete a record by primary key (id)..</para>
         /// </summary>
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <returns>Number of rows affected.</returns>
         public async Task<int> DeleteAsync(int id) => await _base.DeleteAsync<T>(id);
 
         /// <summary>
-        /// <para>Delete all records from any table that match the specified filter.</para>
+        /// <para>Delete all records that match the specified filter.</para>
         /// </summary>
         /// <param name="where">Optional WHERE clause.</param>
-        /// <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
         /// <returns>Number of rows affected.</returns>
         public int Delete(string where, Dictionary<string, object> parms = null) => _base.Delete<T>(where, parms);
 
         /// <summary>
-        /// <para>Delete all records from any table that match the specified filter</para>
+        /// <para>Delete all records that match the specified filter.</para>
         /// </summary>
         /// <param name="where">Optional WHERE clause.</param>
-        /// <param name="parms">Optional set of parameteres that matches the WHERE clause.</param>
+        /// <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
         /// <returns>Number of rows affected.</returns>
         public async Task<int> DeleteAsync(string where, Dictionary<string, object> parms = null) => await _base.DeleteAsync<T>(where, parms);
 
@@ -817,21 +811,21 @@ namespace Dapper.SimpleRepository
         /// <para>Execute any custom query where a return data set it not expected.</para>
         /// </summary>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         public void ExecuteQuery(string query, Dictionary<string, object> parms = null) => _base.ExecuteQuery<T>(query, parms);
 
         /// <summary>
         /// <para>Execute any custom query where a return data set it not expected.</para>
         /// </summary>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         public async Task ExecuteQueryAsync(string query, Dictionary<string, object> parms = null) => await _base.ExecuteQueryAsync<T>(query, parms);
 
         /// <summary>
         /// <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
         /// </summary>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public T ExecuteScalar(string query, Dictionary<string, object> parms = null) => _base.ExecuteScalar<T>(query, parms);
 
@@ -839,7 +833,7 @@ namespace Dapper.SimpleRepository
         /// <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
         /// </summary>
         /// <param name="query">Full SQL query.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T that matches the supplied query.</returns>
         public async Task<T> ExecuteScalarAsync(string query, Dictionary<string, object> parms = null) => await _base.ExecuteScalarAsync<T>(query, parms);
 
@@ -849,21 +843,21 @@ namespace Dapper.SimpleRepository
         /// <para>Execute any Stored Procedure where a return data set it not expected.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
-        public void ExecuteSP(string storedProcedureName, Dictionary<string, object> parms = null) => _base.ExecuteSP<T>(storedProcedureName, parms);
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
+        public void ExecuteSP(string storedProcedureName, Dictionary<string, object> parms = null) => _base.ExecuteSP(storedProcedureName, parms);
 
         /// <summary>
         /// <para>Execute any Stored Procedure where a return data set it not expected.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
-        public async Task ExecuteSPAsync(string storedProcedureName, Dictionary<string, object> parms = null) => await _base.ExecuteSPAsync<T>(storedProcedureName, parms);
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
+        public async Task ExecuteSPAsync(string storedProcedureName, Dictionary<string, object> parms = null) => await _base.ExecuteSPAsync(storedProcedureName, parms);
 
         /// <summary>
         /// <para>Execute any Stored Procedure where a single item is expected as a return.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T.</returns>
         public T ExecuteSPSingle(string storedProcedureName, Dictionary<string, object> parms = null) => _base.ExecuteSPSingle<T>(storedProcedureName, parms);
 
@@ -871,7 +865,7 @@ namespace Dapper.SimpleRepository
         /// <para>Execute any Stored Procedure where a single item is expected as a return.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>A single instance of type T.</returns>
         public async Task<T> ExecuteSPSingleAsync(string storedProcedureName, Dictionary<string, object> parms = null) => await _base.ExecuteSPSingleAsync<T>(storedProcedureName, parms);
 
@@ -879,7 +873,7 @@ namespace Dapper.SimpleRepository
         /// <para>Execute a Store Procedure when a List of T is expected in return.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T.</returns>
         public IEnumerable<T> ExecuteSPList(string storedProcedureName, Dictionary<string, object> parms = null) => _base.ExecuteSPList<T>(storedProcedureName, parms);
 
@@ -887,7 +881,7 @@ namespace Dapper.SimpleRepository
         /// <para>Execute a Store Procedure when a List of T is expected in return.</para>
         /// </summary>
         /// <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-        /// <param name="parms">Optional set of parameteres that matches the query.</param>
+        /// <param name="parms">Optional set of parameters that matches the query.</param>
         /// <returns>An IEnumerable of type T.</returns>
         public async Task<IEnumerable<T>> ExecuteSPListAsync(string storedProcedureName, Dictionary<string, object> parms = null) => await _base.ExecuteSPListAsync<T>(storedProcedureName, parms);
     }
