@@ -3,7 +3,11 @@ using System.Threading.Tasks;
 
 namespace Dapper.SimpleRepository
 {
-    interface IRepositoryStrong<T>
+    /// <summary>
+    /// Create a strongly typed instance of Dapper.SimpleRepository.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public interface IRepositoryStrong<T>
     {
         /// <summary>
         /// <para>Get a specific record from any table by the primary key.</para>

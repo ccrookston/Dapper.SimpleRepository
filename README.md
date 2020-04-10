@@ -1,6 +1,6 @@
 # Dapper.SimpleRepository 
 
-Dapper.SimpleRepository is a Dapper extension that creates a repository which reduces CRUD operations to a single line of code. It also greatly simplifies executing CRUD operations with filters, executing full queries, and executing stored procedures. It supports Async and non-Async in Framework, Standard and Core.
+Dapper.SimpleRepository creates a Dapper repository that reduces CRUD operations to a single line of code. It also greatly simplifies executing CRUD operations with filters, executing full queries, and executing stored procedures. It supports Async and non-Async in Framework, Standard and Core.
 
 First, create your repository by injecting the connection string and defining the type:
 

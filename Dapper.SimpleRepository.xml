@@ -4,6 +4,11 @@
         <name>Dapper.SimpleRepository</name>
     </assembly>
     <members>
+        <member name="T:Dapper.SimpleRepository.IRepositoryGeneric">
+            <summary>
+            Create a generic (weakly) typed instance of Dapper.SimpleRepository.
+            </summary>
+        </member>
         <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.Int32)">
             <summary>
             <para>Get a specific record from any table by the primary key.</para>
@@ -297,6 +302,12 @@
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameteres that matches the query.</param>
             <returns>An IEnumerable of type T.</returns>
+        </member>
+        <member name="T:Dapper.SimpleRepository.IRepositoryStrong`1">
+            <summary>
+            Create a strongly typed instance of Dapper.SimpleRepository.
+            </summary>
+            <typeparam name="T"></typeparam>
         </member>
         <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.Int32)">
             <summary>

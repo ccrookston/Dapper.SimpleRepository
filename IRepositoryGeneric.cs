@@ -3,7 +3,10 @@ using System.Threading.Tasks;
 
 namespace Dapper.SimpleRepository
 {
-    interface IRepositoryGeneric
+    /// <summary>
+    /// Create a generic (weakly) typed instance of Dapper.SimpleRepository.
+    /// </summary>
+    public interface IRepositoryGeneric
     {
         /// <summary>
         /// <para>Get a specific record from any table by the primary key.</para>
