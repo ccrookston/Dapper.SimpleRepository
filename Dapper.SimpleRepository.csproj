@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Description>Dapper.SimpleRepository creates a Dapper repository that reduces CRUD operations to a single line of code. It also greatly simplifies executing CRUD operations with filters, executing full queries, and executing stored procedures. It supports Async and non-Async in Framework, Standard and Core.</Description>
+    <Description>Add a Dapper repository to your project that reduces basic CRUD operations to a single line of code. Execute full queries and stored procedures. Easily add filters and parametrs. Supports Async and non-Async in Framework, Standard and Core.</Description>
     <Company />
     <Authors>Casey Crookston</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -10,12 +10,12 @@
     <Product>Dapper SimpleRepository</Product>
     <Copyright>2020</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
-    <PackageReleaseNotes>Improve intellisense. Bug fix in two stored procedure methods.</PackageReleaseNotes>
-    <Version>1.0.8</Version>
-    <AssemblyVersion>1.0.8.0</AssemblyVersion>
+    <PackageReleaseNotes>Add xml file for intellisense. Minor bug fix in stored procedures. Add interfaces for dependency injection.</PackageReleaseNotes>
+    <Version>1.0.9</Version>
+    <AssemblyVersion>1.0.9.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ccrookston/Dapper.SimpleRepository</RepositoryUrl>
-    <FileVersion>1.0.8.0</FileVersion>
+    <FileVersion>1.0.9.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

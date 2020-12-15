@@ -9,23 +9,25 @@
             Create a generic (weakly) typed instance of Dapper.SimpleRepository.
             </summary>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAsync``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAsync``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter.</para>
             <para>Queries the table matching the type T.</para>
@@ -33,9 +35,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter</para>
             <para>Queries the table matching the type T.</para>
@@ -43,9 +46,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
@@ -53,9 +57,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query.  This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
@@ -63,6 +68,7 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
         <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetAll``1">
@@ -79,7 +85,7 @@
             </summary>
             <returns>An IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             <para>Queries the table matching the type T.</para>
@@ -87,9 +93,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             <para>Queries the table matching the type T.</para>
@@ -97,9 +104,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             <para>Queries the table matching the type T.</para>
@@ -107,9 +115,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             <para>Queries the table matching the type T.</para>
@@ -117,9 +126,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListPaged``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListPaged``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             <para>Queries the table matching the type T.</para>
@@ -130,9 +140,10 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListPagedAsync``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.GetListPagedAsync``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             <para>Queries the table matching the type T.</para>
@@ -143,75 +154,84 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Update``1(``0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Update``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.UpdateAsync``1(``0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.UpdateAsync``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Insert``1(``0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Insert``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             <para>Inserts into the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.InsertAsync``1(``0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.InsertAsync``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             <para>Inserts into the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Delete``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Delete``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id).</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.DeleteAsync``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.DeleteAsync``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id).</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Delete``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.Delete``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.DeleteAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.DeleteAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             <para>Queries the table matching the type T.</para>
@@ -219,8 +239,9 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             <para>Queries the table matching the type T.</para>
@@ -228,73 +249,81 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteScalar``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteScalar``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteScalarAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteScalarAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
+            <summary>
+            <para>Execute any Stored Procedure where a return data set it not expected.</para>
+            </summary>
+            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
+            <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
+        </member>
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
-            <summary>
-            <para>Execute any Stored Procedure where a return data set it not expected.</para>
-            </summary>
-            <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
-            <param name="parms">Optional set of parameters that matches the query.</param>
-        </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPSingle``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPSingle``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPSingleAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPSingleAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryGeneric.ExecuteSPListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
         <member name="T:Dapper.SimpleRepository.IRepositoryStrong`1">
@@ -303,50 +332,56 @@
             </summary>
             <typeparam name="T"></typeparam>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAsync(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAsync(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter.</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter.</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
         <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetAll">
@@ -361,39 +396,43 @@
             </summary>
             <returns>an IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             </summary>
@@ -402,9 +441,10 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             </summary>
@@ -413,135 +453,153 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Update(`0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Update(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.UpdateAsync(`0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.UpdateAsync(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Insert(`0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Insert(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.InsertAsync(`0)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.InsertAsync(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Delete(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Delete(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id)..</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.DeleteAsync(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.DeleteAsync(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id)..</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Delete(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.Delete(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.DeleteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.DeleteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteScalarAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteScalarAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPSingle(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPSingle(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPSingleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPSingleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.IRepositoryStrong`1.ExecuteSPListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
@@ -560,23 +618,25 @@
             </summary>
             <param name="connectionString"></param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.Get``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository.Get``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetAsync``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository.GetAsync``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.Get``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter.</para>
             <para>Queries the table matching the type T.</para>
@@ -584,9 +644,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter</para>
             <para>Queries the table matching the type T.</para>
@@ -594,9 +655,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
@@ -604,9 +666,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query.  This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
@@ -614,6 +677,7 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
         <member name="M:Dapper.SimpleRepository.Repository.GetAll``1">
@@ -630,7 +694,7 @@
             </summary>
             <returns>An IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             <para>Queries the table matching the type T.</para>
@@ -638,9 +702,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             <para>Queries the table matching the type T.</para>
@@ -648,9 +713,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetListFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetListFromQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             <para>Queries the table matching the type T.</para>
@@ -658,9 +724,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetListFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetListFromQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             <para>Queries the table matching the type T.</para>
@@ -668,9 +735,10 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetListPaged``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetListPaged``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             <para>Queries the table matching the type T.</para>
@@ -681,9 +749,10 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.GetListPagedAsync``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.GetListPagedAsync``1(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             <para>Queries the table matching the type T.</para>
@@ -694,75 +763,84 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.Update``1(``0)">
+        <member name="M:Dapper.SimpleRepository.Repository.Update``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.UpdateAsync``1(``0)">
+        <member name="M:Dapper.SimpleRepository.Repository.UpdateAsync``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout"></param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.Insert``1(``0)">
+        <member name="M:Dapper.SimpleRepository.Repository.Insert``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             <para>Inserts into the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.InsertAsync``1(``0)">
+        <member name="M:Dapper.SimpleRepository.Repository.InsertAsync``1(``0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             <para>Inserts into the table matching the type T.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.Delete``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository.Delete``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id).</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.DeleteAsync``1(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository.DeleteAsync``1(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id).</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.Delete``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.Delete``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.DeleteAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.DeleteAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             <para>Deletes from the table matching the type T.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteQuery``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             <para>Queries the table matching the type T.</para>
@@ -770,8 +848,9 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteQueryAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             <para>Queries the table matching the type T.</para>
@@ -779,73 +858,82 @@
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteScalar``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteScalar``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteScalarAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteScalarAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             <para>Queries the table matching the type T.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPSingle``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPSingle``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPSingleAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPSingleAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPList``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository.ExecuteSPListAsync``1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <typeparam name="T">The type that matches the database table.</typeparam>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
         <member name="T:Dapper.SimpleRepository.Repository`1">
@@ -860,50 +948,56 @@
             </summary>
             <param name="connectionString"></param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.Get(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.Get(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetAsync(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetAsync(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record by the primary key (id).</para>
             </summary>
             <param name="id"></param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the primary key matches the supplied id.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.Get(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter.</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific record that matches the specified filter.</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single record of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a specific type from a query. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
         <member name="M:Dapper.SimpleRepository.Repository`1.GetAll">
@@ -918,39 +1012,43 @@
             </summary>
             <returns>an IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable that matches the specified filter</para>
             </summary>
             <param name="where">The SQL WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T where the data matches the supplied WHERE filter.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetListFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListFromQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetListFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListFromQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get an IEnumerable based on a custom query and any (optional) parameters</para>
             </summary>
             <param name="query"></param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListPaged(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             </summary>
@@ -959,9 +1057,10 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.GetListPagedAsync(System.Int32,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Get a paged IEnumerable of all records.</para>
             </summary>
@@ -970,140 +1069,159 @@
             <param name="where">Optional WHERE clause to filter the resutls.</param>
             <param name="orderBy">Optional ORDER BY clause to order the results.</param>
             <param name="parms">Optinal set of paramaters used in WHERE or ORDER BY clauses.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A paged IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.Update(`0)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.Update(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.UpdateAsync(`0)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.UpdateAsync(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Update an existing record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.Insert(`0)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.Insert(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.InsertAsync(`0)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.InsertAsync(`0,System.Nullable{System.Int32})">
             <summary>
             <para>Insert a new record.</para>
             </summary>
             <param name="entity">An instance of type T to be updated.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>The ID (primary key) of the newly inserted record.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.Delete(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.Delete(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id)..</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.DeleteAsync(System.Int32)">
+        <member name="M:Dapper.SimpleRepository.Repository`1.DeleteAsync(System.Int32,System.Nullable{System.Int32})">
             <summary>
             <para>Delete a record by primary key (id)..</para>
             </summary>
             <param name="id">The ID (primary key) of the item to be deleted.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.Delete(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.Delete(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.DeleteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.DeleteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Delete all records that match the specified filter.</para>
             </summary>
             <param name="where">Optional WHERE clause.</param>
             <param name="parms">Optional set of parameters that matches the WHERE clause.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>Number of rows affected.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteQueryAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a return data set it not expected.</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteScalar(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteScalarAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteScalarAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any custom query where a single return item is expected. This type could be a database model, or it could be a single string, or it could be an INT if the query is a SELECT COUNT().</para>
             </summary>
             <param name="query">Full SQL query.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T that matches the supplied query.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSP(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a return data set it not expected.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPSingle(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPSingle(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPSingleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPSingleAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute any Stored Procedure where a single item is expected as a return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>A single instance of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPList(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
-        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+        <member name="M:Dapper.SimpleRepository.Repository`1.ExecuteSPListAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{System.Int32})">
             <summary>
             <para>Execute a Store Procedure when a List of T is expected in return.</para>
             </summary>
             <param name="storedProcedureName">Name of the stored procedure to be executed.</param>
             <param name="parms">Optional set of parameters that matches the query.</param>
+            <param name="commandTimeout">Optional command time out value.</param>
             <returns>An IEnumerable of type T.</returns>
         </member>
     </members>
