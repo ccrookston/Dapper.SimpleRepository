@@ -10,8 +10,8 @@
     <Product>Dapper SimpleRepository</Product>
     <Copyright>2020</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
-    <PackageReleaseNotes>Add xml file for intellisense. Minor bug fix in stored procedures. Add interfaces for dependency injection.</PackageReleaseNotes>
-    <Version>1.0.9</Version>
+    <PackageReleaseNotes>Add Optional parameters for CommandTimeOut.</PackageReleaseNotes>
+    <Version>1.0.10</Version>
     <AssemblyVersion>1.0.9.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ccrookston/Dapper.SimpleRepository</RepositoryUrl>
