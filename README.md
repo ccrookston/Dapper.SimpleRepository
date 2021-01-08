@@ -66,9 +66,7 @@ Creating and executing the SQL queries is handled for you by Dapper. Opening and
 
 ### Why Dapper.SimpleRepository?
 -------
-While Dapper.SimpleCrud goes a long ways to greatly simplifying the code needed to use Dapper, I still craved an even EASIER and FASTER way to crank out my data access layers. And so in every project, I found myself creating a Resposity to take care of *all* of the busy work for me. 
-
-The repository handles the tedious task of opening and closing the database connection every time you call the database, while at the same time exposing the CRUD, Query and Store Procedure methods you need to create the app.
+While Dapper goes a long ways to greatly simplifying data access, I still craved an even EASIER and FASTER way to crank out my data access layers. And so in every project, I found myself creating a Resposity to take care of *all* of the busy work for me. Dapper.SimpleRepository handles the tedious tasks of creating CRUD queries, and of opening and closing the connection every time you call the database.
 
 ### How It Works
 -------
