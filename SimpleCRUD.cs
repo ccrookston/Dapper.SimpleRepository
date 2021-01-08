@@ -1029,9 +1029,9 @@ namespace Dapper.SimpleRepository
                 var columnName = Encapsulate(propertyInfo.Name);
 
                 var columnattr = propertyInfo.GetCustomAttributes(true).SingleOrDefault(attr => attr.GetType().Name == typeof(ColumnAttribute).Name) as dynamic;
-                if (columnattr != null)
+                if (columnattr != null && columnattr.Name != null)
                 {
-                    columnName = Encapsulate(columnattr.Name);
+                    string newColumnName = Encapsulate(columnattr.Name);
                     if (Debugger.IsAttached)
                         Trace.WriteLine(String.Format("Column name for type overridden from {0} to {1}", propertyInfo.Name, columnName));
                 }
