@@ -10,7 +10,7 @@
     <Product>Dapper SimpleRepository</Product>
     <Copyright>2021</Copyright>
     <PackageTags>dapper repository CRUD orm micro-orm</PackageTags>
-    <PackageReleaseNotes>Allow for the possibility that Primarry Keys may be an object type other than Int. (Examples: Guid, string, uint, long, ulong, short, ushort)</PackageReleaseNotes>
+    <PackageReleaseNotes>Allow for the possibility that Primary Keys may be an object type other than Int. (Examples: Guid, string, uint, long, ulong, short, ushort)</PackageReleaseNotes>
     <Version>1.1.1</Version>
     <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <PackageProjectUrl>https://github.com/ccrookston/Dapper.SimpleRepository</PackageProjectUrl>
