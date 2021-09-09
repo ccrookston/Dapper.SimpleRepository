@@ -41,7 +41,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id"></param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
-        public T Get<T>(int id, int? commandTimeout = null)
+        public T Get<T>(object id, int? commandTimeout = null)
         {
             T entity;
             using (var connection = OpenConnection(_connectionString))
@@ -58,7 +58,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id"></param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
-        public async Task<T> GetAsync<T>(int id, int? commandTimeout = null)
+        public async Task<T> GetAsync<T>(object id, int? commandTimeout = null)
         {
             T entity;
             using (var connection = OpenConnection(_connectionString))
@@ -386,6 +386,25 @@ namespace Dapper.SimpleRepository
         /// <summary>
         /// <para>Insert a new record.</para>
         /// <para>Inserts into the table matching the type T.</para>
+        /// <para>Allows the PK Type to be defined.</para>
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="commandTimeout"></param>
+        /// <returns></returns>
+        public TKey Insert<TKey, T>(T entity, int? commandTimeout = null)
+        {
+            using (var connection = OpenConnection(_connectionString))
+            {
+                var result = connection.Insert<TKey, T>(entity, commandTimeout: commandTimeout);
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// <para>Insert a new record.</para>
+        /// <para>Inserts into the table matching the type T.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
@@ -400,6 +419,25 @@ namespace Dapper.SimpleRepository
             return newId;
         }
 
+        /// <summary>
+        /// <para>Insert a new record.</para>
+        /// <para>Inserts into the table matching the type T.</para>
+        /// <para>Allows the PK Type to be defined.</para>
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="commandTimeout"></param>
+        /// <returns></returns>
+        public async Task<TKey> InsertAsync<TKey, T>(T entity, int? commandTimeout = null)
+        {
+            using (var connection = OpenConnection(_connectionString))
+            {
+                var result = await connection.InsertAsync<TKey, T>(entity, commandTimeout: commandTimeout);
+                return result;
+            }
+        }
+
         // ----------- DELETE Methods ----------- //
 
         /// <summary>
@@ -409,7 +447,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>Number of rows affected.</returns>
-        public int Delete<T>(int id, int? commandTimeout = null)
+        public int Delete<T>(object id, int? commandTimeout = null)
         {
             using (var connection = OpenConnection(_connectionString))
             {
@@ -424,7 +462,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>Number of rows affected.</returns>
-        public async Task<int> DeleteAsync<T>(int id, int? commandTimeout = null)
+        public async Task<int> DeleteAsync<T>(object id, int? commandTimeout = null)
         {
             using (var connection = OpenConnection(_connectionString))
             {
@@ -665,7 +703,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id"></param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
-        public T Get(int id, int? commandTimeout = null) => _base.Get<T>(id, commandTimeout: commandTimeout);
+        public T Get(object id, int? commandTimeout = null) => _base.Get<T>(id, commandTimeout: commandTimeout);
 
         /// <summary>
         /// <para>Get a specific record by the primary key (id).</para>
@@ -673,7 +711,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id"></param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
-        public async Task<T> GetAsync(int id, int? commandTimeout = null) => await _base.GetAsync<T>(id, commandTimeout: commandTimeout);
+        public async Task<T> GetAsync(object id, int? commandTimeout = null) => await _base.GetAsync<T>(id, commandTimeout: commandTimeout);
 
         /// <summary>
         /// <para>Get a specific record that matches the specified filter.</para>
@@ -815,11 +853,31 @@ namespace Dapper.SimpleRepository
 
         /// <summary>
         /// <para>Insert a new record.</para>
+        /// <para>Allows the PK Type to be defined.</para>
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="commandTimeout"></param>
+        /// <returns></returns>
+        public TKey Insert<TKey>(T entity, int? commandTimeout = null) => _base.Insert<TKey, T>(entity, commandTimeout: commandTimeout);
+
+        /// <summary>
+        /// <para>Insert a new record.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>The ID (primary key) of the newly inserted record.</returns>
         public async Task<int?> InsertAsync(T entity, int? commandTimeout = null) => await _base.InsertAsync<T>(entity, commandTimeout: commandTimeout);
+
+        /// <summary>
+        /// <para>Insert a new record.</para>
+        /// <para>Allows the PK Type to be defined.</para>
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="commandTimeout"></param>
+        /// <returns></returns>
+        public async Task<TKey> InsertAsync<TKey>(T entity, int? commandTimeout = null) => await _base.InsertAsync<TKey, T>(entity, commandTimeout: commandTimeout);
 
         // ----------- DELETE Methods ----------- //
 
@@ -829,7 +887,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>Number of rows affected.</returns>
-        public int Delete(int id, int? commandTimeout = null) => _base.Delete<T>(id, commandTimeout: commandTimeout);
+        public int Delete(object id, int? commandTimeout = null) => _base.Delete<T>(id, commandTimeout: commandTimeout);
 
         /// <summary>
         /// <para>Delete a record by primary key (id)..</para>
@@ -837,7 +895,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>Number of rows affected.</returns>
-        public async Task<int> DeleteAsync(int id, int? commandTimeout = null) => await _base.DeleteAsync<T>(id, commandTimeout: commandTimeout);
+        public async Task<int> DeleteAsync(object id, int? commandTimeout = null) => await _base.DeleteAsync<T>(id, commandTimeout: commandTimeout);
 
         /// <summary>
         /// <para>Delete all records that match the specified filter.</para>

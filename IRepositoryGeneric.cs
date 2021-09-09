@@ -15,7 +15,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id"></param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
-        T Get<T>(int id, int? commandTimeout = null);
+        T Get<T>(object id, int? commandTimeout = null);
 
         /// <summary>
         /// <para>Get a specific record by the primary key (id).</para>
@@ -24,7 +24,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id"></param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>A single record of type T where the primary key matches the supplied id.</returns>
-        Task<T> GetAsync<T>(int id, int? commandTimeout = null);
+        Task<T> GetAsync<T>(object id, int? commandTimeout = null);
 
         /// <summary>
         /// <para>Get a specific record that matches the specified filter.</para>
@@ -192,11 +192,35 @@ namespace Dapper.SimpleRepository
         /// <summary>
         /// <para>Insert a new record.</para>
         /// <para>Inserts into the table matching the type T.</para>
+        /// <para>Allows the PK Type to be defined.</para>
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="commandTimeout"></param>
+        /// <returns></returns>
+        TKey Insert<TKey, T>(T entity, int? commandTimeout = null);
+
+        /// <summary>
+        /// <para>Insert a new record.</para>
+        /// <para>Inserts into the table matching the type T.</para>
         /// </summary>
         /// <param name="entity">An instance of type T to be updated.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>The ID (primary key) of the newly inserted record.</returns>
         Task<int?> InsertAsync<T>(T entity, int? commandTimeout = null);
+
+        /// <summary>
+        /// <para>Insert a new record.</para>
+        /// <para>Inserts into the table matching the type T.</para>
+        /// <para>Allows the PK Type to be defined.</para>
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="commandTimeout"></param>
+        /// <returns></returns>
+        Task<TKey> InsertAsync<TKey, T>(T entity, int? commandTimeout = null);
 
         // ----------- DELETE Methods ----------- //
 
@@ -207,7 +231,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>Number of rows affected.</returns>
-        int Delete<T>(int id, int? commandTimeout = null);
+        int Delete<T>(object id, int? commandTimeout = null);
 
         /// <summary>
         /// <para>Delete a record by primary key (id).</para>
@@ -216,7 +240,7 @@ namespace Dapper.SimpleRepository
         /// <param name="id">The ID (primary key) of the item to be deleted.</param>
         /// <param name="commandTimeout">Optional command time out value.</param>
         /// <returns>Number of rows affected.</returns>
-        Task<int> DeleteAsync<T>(int id, int? commandTimeout = null);
+        Task<int> DeleteAsync<T>(object id, int? commandTimeout = null);
 
         /// <summary>
         /// <para>Delete all records that match the specified filter.</para>
